@@ -3,7 +3,7 @@
 {application, riak_kv,
  [
   {description, "Riak Key/Value Store"},
-  {vsn, "1.0.0"},
+  {vsn, "1.0.1"},
   {applications, [
                   kernel,
                   stdlib,
@@ -32,6 +32,9 @@
          %% set to false for improved performance for bucket and key
          %% listing operations.
          {legacy_keylisting, true},
+
+         %% use the legacy routines for tracking kv stats
+         {legacy_stats, true},
 
          %% Allow Erlang MapReduce functions to be specified as
          %% strings.
